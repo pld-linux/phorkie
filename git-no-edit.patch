@@ -1,0 +1,10 @@
+--- phorkie/src/phorkie/Repository/Post.php~	2012-09-28 23:10:04.000000000 +0300
++++ phorkie/src/phorkie/Repository/Post.php	2013-09-14 15:37:41.302081945 +0300
+@@ -134,6 +134,7 @@
+             $vc->getCommand('commit')
+                 ->setOption('message', '')
+                 ->setOption('allow-empty-message')
++                ->setOption('no-edit')
+                 ->setOption(
+                     'author',
+                     $sessionData['name'] . ' <' . $sessionData['email'] . '>'

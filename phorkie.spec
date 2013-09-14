@@ -5,12 +5,13 @@
 Summary:	PHP and Git based pastebin
 Name:		phorkie
 Version:	0.3.1
-Release:	0.7
+Release:	0.8
 License:	AGPL v3
 Group:		Applications/WWW
 Source0:	http://downloads.sourceforge.net/phorkie/%{name}-%{version}.tar.bz2
 # Source0-md5:	46b93c9270ea7950cea9ac8c58641378
 Patch0:		geshi-path.patch
+Patch1:		git-no-edit.patch
 Source1:	apache.conf
 Source2:	lighttpd.conf
 URL:		http://sourceforge.net/projects/phorkie/
@@ -45,6 +46,7 @@ have multiple files and are stored in git repositories.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 mv data/config.php.dist config.php
 
