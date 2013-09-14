@@ -1,12 +1,11 @@
 # TODO
-# - handle deps (see README)
 # - elasticsearch
 # - htaccess
 %define		php_min_version 5.3.0
 Summary:	PHP and Git based pastebin
 Name:		phorkie
 Version:	0.3.1
-Release:	0.5
+Release:	0.6
 License:	AGPL v3
 Group:		Applications/WWW
 Source0:	http://downloads.sourceforge.net/phorkie/%{name}-%{version}.tar.bz2
@@ -17,6 +16,15 @@ URL:		http://sourceforge.net/projects/phorkie/
 BuildRequires:	rpmbuild(macros) >= 1.268
 Requires:	git-core
 Requires:	php(core) >= %{php_min_version}
+Requires:	php-geshi
+Requires:	php-markdown
+Requires:	php-pear-Date_HumanDiff
+Requires:	php-pear-OpenID
+Requires:	php-pear-Pager
+Requires:	php-pear-Services_Libravatar
+Requires:	php-pear-VersionControl_Git
+Requires:	php-twig-Twig
+Requires:	php-zz-MIME_Type_PlainDetect
 Requires:	webapps
 Requires:	webserver(access)
 Requires:	webserver(alias)
