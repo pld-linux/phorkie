@@ -45,8 +45,8 @@ have multiple files and are stored in git repositories.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
+%patch -P0 -p1
+%patch -P1 -p1
 
 mv data/config.php.dist config.php
 
